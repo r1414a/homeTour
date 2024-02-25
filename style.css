@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#panorama {
+    width: 100vw;
+   height: 100vh;
+   
+}
+
+.custom-hotspot{
+    background-image: url(./chevron-up.svg);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+  opacity: 1;
+  animation: animate-arrow-1 1s ease-in-out infinite;
+
+}
+
+.custom-hotspot::before{
+    content:"";
+  background-image: url(./chevron-up.svg);
+  background-size: cover;
+  display: block;
+  position: absolute;
+  width: 40px;
+  top: 20px;
+  bottom: 0;
+  right: 5px;
+  height: 40px;
+  opacity: 0.5;
+  animation: animate-arrow-2 1s ease-in-out infinite 0.1s;
+}
+
+.custom-hotspot::after{
+    content:"";
+    background-image: url(./chevron-up.svg);
+    background-size: cover;
+  display: block;
+  width: 30px;
+  top: 40px;
+  bottom: 0;
+  right: 10px;
+  height: 30px;
+  position: absolute;
+  opacity: 0.3;
+  animation: animate-arrow-3 1s ease-in-out infinite 0.2s;
+}
+
+
+
+@keyframes animate-arrow-1 {
+    0%{margin-top: 20px;opacity: 0;}
+    70%,100%{margin-top: 0px;opacity: 1;}
+  }
+  
+  @keyframes animate-arrow-2 {
+    0%{margin-top: 25px;opacity: 0;}
+    70%,100%{margin-top: 0px;opacity: 0.5;}
+  }
+  @keyframes animate-arrow-3 {
+    0%{margin-top: 30px;opacity: 0;}
+    70%,100%{margin-top: 0px;opacity: 0.3;}
+  } 
+
+
+div.custom-tooltip span {
+    visibility: hidden;
+    position: absolute;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    max-width: 200px;
+    padding: 5px 10px;
+    margin-left: -220px;
+    cursor: default;
+}
+div.custom-tooltip:hover span{
+    visibility: visible;
+}
