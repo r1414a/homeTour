@@ -1,9 +1,9 @@
 let pano = pannellum.viewer('panorama', {   
     "autoLoad": true,
    "hfov": 120,
+   //"hotSpotDebug": true,
     "default": {
         "firstScene": "hall",
-        "author": "Rupesh Chincholkar",
         "sceneFadeDuration": 1000,
     },
 
@@ -20,7 +20,6 @@ let pano = pannellum.viewer('panorama', {
                     "pitch": -16,
                     "yaw": 115,
                     "type": "scene",
-                    "text": "Play Room",
                     "sceneId": "play",
                     "cssClass": "custom-hotspot",
                     "createTooltipFunc": hotspot,
@@ -40,14 +39,43 @@ let pano = pannellum.viewer('panorama', {
                     "pitch": -25,
                     "yaw": 110,
                     "type": "scene",
-                    "text": "Music Room",
                     "sceneId": "music",
                     "cssClass": "custom-hotspot",
                     "createTooltipFunc": hotspot,
                     "createTooltipArgs": "Music Room"
+                },
+                {
+                    "pitch": -20,
+                    "yaw": -153,
+                    "type": "scene",
+                    "sceneId": "bathroom",
+                    "cssClass": "custom-hotspot",
+                    "createTooltipFunc": hotspot,
+                    "createTooltipArgs": "Bathroom"
                 }
             ]
         },
+
+        "bathroom":{
+            "title": "Bathroom",
+            "hfov": 120,
+            "pitch": -5,
+            "yaw": 115,
+            "type": "equirectangular",
+            "panorama": "./images/bathroom.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -25,
+                    "yaw": 110,
+                    "type": "scene",
+                    "sceneId": "play",
+                    "cssClass": "custom-hotspot",
+                    "createTooltipFunc": hotspot,
+                    "createTooltipArgs": "Play Room"
+                }
+            ]
+        },
+
         "music": {
             "title": "Music Room",
             "hfov": 120,
@@ -60,7 +88,6 @@ let pano = pannellum.viewer('panorama', {
                     "pitch": -24,
                     "yaw": -176,
                     "type": "scene",
-                    "text": "Draw Room",
                     "sceneId": "draw",
                     "cssClass": "custom-hotspot",
                     "createTooltipFunc": hotspot,
@@ -80,7 +107,6 @@ let pano = pannellum.viewer('panorama', {
                     "pitch": -24,
                     "yaw": 87,
                     "type": "scene",
-                    "text": "Hall",
                     "sceneId": "hall",
                     "cssClass": "custom-hotspot",
                     "createTooltipFunc": hotspot,
@@ -100,5 +126,5 @@ function hotspot(hotSpotDiv, args) {
     hotSpotDiv.appendChild(span);
     span.style.width = span.scrollWidth + 'px';
     span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
-    span.style.marginTop = -span.scrollHeight - 12 + 'px';
+    span.style.marginTop = -span.scrollHeight  + 'px';
 }

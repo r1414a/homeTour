@@ -10,7 +10,7 @@
    
 }
 
-.custom-hotspot{
+div.custom-hotspot{
     background-image: url(./chevron-up.svg);
     background-size: cover;
     width: 50px;
@@ -20,7 +20,7 @@
 
 }
 
-.custom-hotspot::before{
+div.custom-hotspot::before{
     content:"";
   background-image: url(./chevron-up.svg);
   background-size: cover;
@@ -35,7 +35,7 @@
   animation: animate-arrow-2 1s ease-in-out infinite 0.1s;
 }
 
-.custom-hotspot::after{
+div.custom-hotspot::after{
     content:"";
     background-image: url(./chevron-up.svg);
     background-size: cover;
@@ -68,17 +68,14 @@
 
 
 div.custom-tooltip span {
-    visibility: hidden;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
     position: absolute;
     border-radius: 3px;
-    background-color: #fff;
-    color: #000;
     text-align: center;
     max-width: 200px;
     padding: 5px 10px;
     margin-left: -220px;
     cursor: default;
-}
-div.custom-tooltip:hover span{
-    visibility: visible;
 }
