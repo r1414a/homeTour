@@ -1,17 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Tour</title>
-    <link rel="stylesheet" href="style.css">  
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
-   <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
-</head>
-<body>
-    <div id="panorama">
-    </div>
-<script src="script.js"></script>
-</body>
+    <link rel="stylesheet" href="style.css" />
 
+    <!--bootstrap library-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--pannellum library-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"
+    />
+  </head>
+  <body>
+    <div id="panorama">
+        <div class="menu">
+            <i class="bi bi-list-task"></i>
+            <div class="menu-options" id="menuoptions">
+                <div id="hall">Hall</div>
+                <div id="play">Play Room</div>
+                <div id="bath">Bathroom</div>
+                <div id="music">Music Room</div>
+                <div id="draw">Drawing Room</div>
+            </div>
+        </div>
+    </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Property Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="modal-content-box-1">
+            
+            <p class="content"><img src="./images/hall.jpg" alt="" width="45%">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laborum voluptas sint minima consequatur facilis quae earum exercitationem voluptatibus fugiat culpa a sed assumenda corporis omnis itaque ad officiis explicabo, excepturi sequi recusandae aliquam debitis maiores. Tempore, magnam, esse rerum veniam deserunt placeat incidunt distinctio labore soluta quaerat itaque ea iure ipsum commodi quibusdam expedita rem nostrum. Repellendus quaerat aspernatur vel in totam reprehenderit eos veritatis, distinctio facilis!..
+            </p>
+          </div>
+          <div id="modal-content-box-2" class="d-flex mt-2">
+                <ul class="content mx-4">
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Ratione laborum voluptas sint minima consequatur facilis.</li>
+                    <li>eligendi earum nulla deleniti quos voluptas recusandae!.</li>
+                    <li>aspernatur vel in totam reprehenderit eos veritatis</li>
+                    <li> Quibusdam quidem magni quod mollitia itaque iure.</li>
+                    <li>Tempore, magnam.</li>
+                </ul>
+                <ul class="content mx-4">
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Ratione laborum voluptas sint minima consequatur facilis.</li>
+                    <li>eligendi earum nulla deleniti quos voluptas recusandae!.</li>
+                    <li>aspernatur vel in totam reprehenderit eos veritatis</li>
+                    <li> Quibusdam quidem magni quod mollitia itaque iure.</li>
+                    <li>Tempore, magnam.</li>
+                </ul>
+            
+          </div>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+    <div id="details-tab">
+        
+        <!-- Button trigger modal -->
+        <i class="bi bi-info-circle" data-bs-toggle="modal"
+        data-bs-target="#exampleModal" data-bs-toggle="tooltip" data-bs-placement="top" title="Property Info"></i>
+  
+        <i id="play-video" class="bi bi-camera-reels" data-bs-toggle="tooltip" data-bs-placement="top" title="Property Video"></i>
+    </div>
+    <div id="video-wrapper">
+        <div id="video-container">
+            <button id="video-close"><i class="bi bi-x-lg"></i></button>
+        <video id="video" src="./video/tourVideo.mp4" type="video/mp4" controls></video>
+    </div>
+    </div>
+
+    
+
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

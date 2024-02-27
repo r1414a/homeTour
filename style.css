@@ -4,10 +4,14 @@
     box-sizing: border-box;
 }
 
+body{
+  overflow: hidden;
+}
+
 #panorama {
     width: 100vw;
    height: 100vh;
-   
+   z-index: 10;
 }
 
 div.custom-hotspot{
@@ -50,6 +54,12 @@ div.custom-hotspot::after{
   animation: animate-arrow-3 1s ease-in-out infinite 0.2s;
 }
 
+.pnlm-panorama-info{
+  color: #000 !important;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  background-color: white !important;
+}
 
 
 @keyframes animate-arrow-1 {
@@ -68,9 +78,10 @@ div.custom-hotspot::after{
 
 
 div.custom-tooltip span {
-    visibility: visible;
-    background-color: #000;
-    color: #fff;
+  color: #000;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  background-color: white;
     position: absolute;
     border-radius: 3px;
     text-align: center;
@@ -78,4 +89,136 @@ div.custom-tooltip span {
     padding: 5px 10px;
     margin-left: -220px;
     cursor: default;
+}
+
+
+#details-tab{
+  z-index: 15;
+  border: 2px solid #999999;
+  border-radius: 3px;
+  background-color: white;
+  margin: 0px auto;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 30px;
+  width: 130px;
+  justify-content: center;
+  align-items: center;
+}
+
+#details-tab i{
+  padding: 5px;
+  color: #000;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#details-tab i:hover{
+  scale: 1.2;
+  transition: scale 0.5s ease-in-out;
+}
+
+.content{
+  text-align: justify;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: grey;
+}
+
+.content img{
+  float: right;
+  margin-left: 20px;
+}
+
+
+#video-container{
+  z-index: 20;
+  width: 0vw;
+  height: 0vh;
+  transition: all 0.5s ease-in-out;
+}
+
+#video-wrapper{
+  z-index: 8;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+#video-container video{
+  width: inherit;
+  height: inherit;
+  object-fit: fill;
+}
+
+#video-close{
+  z-index: 18;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  padding: 0px 10px;
+  top: 10px;
+  visibility: hidden;
+  color: #fff;
+  right: 40px;
+  border: none;
+  font-size: 30px;
+}
+
+
+#panorama .menu{
+  z-index: 15;
+  position: absolute;
+  left: 5px;
+  top: 100px;
+}
+
+#panorama .menu i{
+  font-size: 20px;
+  color: #000;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  background-color: white;
+  padding: 3px;
+}
+
+#panorama .menu .menu-options{
+  margin-top: 10px;
+  transform: translateX(0px);
+  transition: transform 0.5s ease-in-out;
+}
+
+#panorama .menu .togglemenu{
+  transform: translateX(-130px);
+}
+
+#details-tab{
+  transition: transform 0.5s ease-in-out;
+}
+
+.toggletab{
+  transform: translateY(100px);
+}
+
+#panorama .menu .menu-options > div{
+  color: #000;
+  cursor: pointer;
+  margin-top: 5px;
+  font-size: 16px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  background-color: white;
+  padding: 5px;
+}
+
+#panorama .menu .menu-options div:hover{
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
 }
