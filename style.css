@@ -222,3 +222,7 @@ div.custom-tooltip span {
   background-color: rgba(0,0,0,0.5);
   color: #fff;
 }
+
+.pnlm-load-box{
+  display: none !important;
+}

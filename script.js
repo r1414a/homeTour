@@ -12,10 +12,9 @@ let music = document.getElementById('music');
 let bathroom = document.getElementById('bath');
 let draw = document.getElementById('draw');
 
-console.log(menuIcon);
 
 let pano = pannellum.viewer('panorama', {   
-    "autoLoad": true,
+   "autoLoad": true,
    "hfov": 120,
    //"hotSpotDebug": true,
     "default": {
@@ -26,7 +25,6 @@ let pano = pannellum.viewer('panorama', {
     "scenes": {
         "hall": {
             "title": "Hall",
-            "hfov": 120,
             "pitch": -3,
             "yaw": 117,
             "type": "equirectangular",
@@ -39,14 +37,13 @@ let pano = pannellum.viewer('panorama', {
                     "sceneId": "play",
                     "cssClass": "custom-hotspot",
                     "createTooltipFunc": hotspot,
-                    "createTooltipArgs": "Play Room"
+                    "createTooltipArgs": "Play Room",
                 }
             ]
         },
 
         "play": {
             "title": "Play Room",
-            "hfov": 120,
             "pitch": -3,
             "yaw": 117,
             "type": "equirectangular",
@@ -75,7 +72,6 @@ let pano = pannellum.viewer('panorama', {
 
         "bathroom":{
             "title": "Bathroom",
-            "hfov": 120,
             "yaw": 115,
             "type": "equirectangular",
             "panorama": "./images/bathroom.jpg",
@@ -94,7 +90,6 @@ let pano = pannellum.viewer('panorama', {
 
         "music": {
             "title": "Music Room",
-            "hfov": 120,
             "pitch": -1,
             "yaw": 115,
             "type": "equirectangular",
@@ -114,7 +109,6 @@ let pano = pannellum.viewer('panorama', {
 
         "draw": {
             "title": "Draw Room",
-            "hfov": 100,
             "yaw": 15,
             "type": "equirectangular",
             "panorama": "./images/draw.jpg",
